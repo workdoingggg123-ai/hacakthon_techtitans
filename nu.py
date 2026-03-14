@@ -47,7 +47,7 @@ class UniversityResultSystem:
                 m = int(input(f"Subject {j+1}: "))
                 student_marks.append(m)
 
-                all_marks.append(student_marks)
+            all_marks.append(student_marks)
 
         self.marks = np.array(all_marks)
 

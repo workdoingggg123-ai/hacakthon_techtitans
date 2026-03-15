@@ -1,0 +1,12 @@
+
+Product: pen
+Day 1: Sold 3 | Profit 60
+Total Profit: 60
+Day 2: Sold 34 | Profit 680
+Total Profit: 740
+
+Product: meet
+Day 1: Sold 43 | Profit 1849
+Total Profit: 1849
+Day 2: Sold 44 | Profit 1892
+Total Profit: 3741

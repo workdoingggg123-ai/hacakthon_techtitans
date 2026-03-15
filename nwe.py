@@ -26,11 +26,12 @@ class ShopKeeper:
 
         self.product_name = []
 
-        num_product = int(input("Give The Number Of Product In Shop : "))
-        num_days = int(input("Give The Number Of Days Of Sales : "))
+        with open ("shopkeeper.txt" ,"a") as file:
+         num_product = int(input("Give The Number Of Product In Shop : "))
+         num_days = int(input("Give The Number Of Days Of Sales : "))
 
-        sales_data = []
-        profit_data = []
+         sales_data = []
+         profit_data = []
 
         for i in range(num_product):
 
@@ -66,6 +67,37 @@ class ShopKeeper:
         print(self.profit)
 
         print(f"\nThe Total Profit Is {self.profit.sum()}")
+
+        with open("shopkeeper.txt", "w") as file:
+
+          for i in range(len(self.product_name)):
+
+            file.write(f"\nProduct: {self.product_name[i]}\n")
+
+            total_profit = 0
+
+            for j in range(len(self.sales[i])):
+
+               sale = self.sales[i][j]
+               profit = self.profit[i][j]
+
+               total_profit += profit
+
+               file.write(f"Day {j+1}: Sold {sale} | Profit {profit}\n")
+
+               file.write(f"Total Profit: {total_profit}\n")
+
+
+
+
+
+
+
+
+
+
+
+
 
     # Profit Per Product
     def profit_peritem(self):
